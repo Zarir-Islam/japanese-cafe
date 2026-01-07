@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Zen+Old+Mincho&display=swap');
+
+:root {
+    --bg-cream: #FDFBF0;
+    --text-brown: #5A3A2A;
+    --card-pink: #FFF0E5;
+    --ribbon-green: #8FB996;
+    --footer-pink: #F8C8C8;
+    --font-main: 'Zen Old Mincho', serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--text-brown);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* LOGO STYLES */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.icon-link {
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    color: var(--text-brown);
+}
+
+/* --- PAGE 1: LANDING CONTENT --- */
+.hero-image {
+    width: 100%;
+    height: auto; 
+    min-height: 250px;
+    background-color: #ddd;
+    /* Remove background-image here if using <img> tag in HTML */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.intro-text {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.intro-title { font-size: 24px; margin-bottom: 20px; color: #d4a373;}
+.intro-desc { font-size: 14px; line-height: 2.2; margin-bottom: 30px; }
+
+/* --- ABOUT SECTION STYLES --- */
+.about-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.about-main-title {
+    font-size: 28px;
+    color: var(--text-brown);
+    display: inline-block;
+    border-bottom: 3px dotted #F8C8C8;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.about-sub-title {
+    font-size: 14px;
+    color: var(--text-brown);
+    letter-spacing: 1px;
+}
+
+.about-green-ribbon {
+    background-color: #9FCBAB;
+    color: white;
+    padding: 15px 20px;
+    margin: 0 auto 30px auto;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 92% 50%, 100% 100%, 0 100%);
+}
+.about-green-ribbon u {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.about-description {
+    text-align: center;
+    line-height: 2.4;
+    font-size: 14px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    color: var(--text-brown);
+}
+
+/* Video Box */
+.video-container {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto 40px auto;
+    display: block;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+}
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.btn-oval {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid var(--text-brown);
+    color: var(--text-brown);
+    padding: 10px 40px;
+    border-radius: 50px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.btn-oval:hover {
+    background-color: var(--text-brown);
+    color: white;
+}
+
+/* --- CALENDAR SECTION (UPDATED FOR MOBILE STACKED / PC SIDE-BY-SIDE) --- */
+.calendar-section {
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    color: var(--text-brown);
+    font-family: 'Zen Old Mincho', serif;
+    overflow: hidden;
+    background-image: url('../images/bg-texture.png');
+}
+
+/* Base Styles for Decorations */
+.calendar-decor {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* DEFAULT (MOBILE) STYLES */
+/* 1. Mobile Decorations (Bricks & Leaves) - Visible */
+.decor-brick-top { display: block; top: 0; left: 0; width: 150px; opacity: 0.8; }
+.decor-leaf-top { display: block; top: 0; right: 0; width: 120px; }
+.decor-brick-bottom { display: block; bottom: 0; right: 20px; width: 200px; opacity: 0.8; }
+
+/* 2. PC Decorations (Vines) - Hidden on Mobile */
+.decor-vine-left, .decor-vine-right { display: none; }
+
+/* 3. Title */
+.calendar-title-en {
+    font-size: 24px;
+    display: inline-block;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    border-bottom: 3px dotted #F8C8C8; /* Dotted on Mobile */
+    padding-bottom: 5px;
+}
+.calendar-title-jp {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 30px;
+    color: #888;
+}
+
+.calendar-month {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* 4. Layout: Stacked for Mobile */
+.calendar-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 350px;
+    font-family: serif;
+}
+.cal-header { font-weight: normal; font-size: 14px; color: var(--text-brown); }
+.cal-day { padding: 8px 5px; font-size: 14px; }
+
+.calendar-info {
+    text-align: left;
+    width: 100%;
+    max-width: 350px;
+}
+
+.calendar-legend {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    line-height: 2;
+    color: #888;
+    font-size: 11px;
+}
+.legend-marker {
+    display: inline-block;
+    width: 15px;
+    color: var(--text-brown);
+}
+.calendar-note {
+    line-height: 1.6;
+    color: #888;
+    font-size: 11px;
+}
+
+/* --- INFO DARK SECTION --- */
+.info-dark-section {
+    background-color: #4A3B32;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+.info-dark-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.info-text-block {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* --- PICK UP / SLIDER --- */
+.pickup-section {
+    text-align: center;
+    padding: 60px 0;
+}
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.arrow-btn {
+    font-size: 24px;
+    color: var(--ribbon-green);
+    cursor: pointer;
+}
+
+/* --- MENU CARD STYLES --- */
+.menu-card {
+    background-color: var(--card-pink);
+    border: 1px solid #E0D0C0;
+    border-radius: 150px 150px 0 0;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto 60px auto;
+    padding: 70px 20px 40px 20px;
+    position: relative;
+    text-align: center;
+}
+.ribbon-container {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--ribbon-green);
+    color: white;
+    padding: 5px 30px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.food-featured {
+    width: 100%;
+    height: 150px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.food-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+.food-item-box {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #ccc;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    object-fit: cover;
+}
+.food-name { font-size: 12px; margin-bottom: 5px;}
+
+/* --- INSTAGRAM GRID --- */
+.insta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.insta-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #ccc;
+    object-fit: cover;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--footer-pink);
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+.footer-btn {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid var(--text-brown);
+    padding: 10px 30px;
+    margin-top: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* --- ACCESS PAGE SPECIFIC --- */
+.access-info-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.shop-pink-square {
+    width: 160px;
+    height: 160px;
+    background-color: #FFD4D4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+}
+.shop-pink-square img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+.shop-details-text {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.8;
+}
+.shop-details-text h3 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: var(--text-brown);
+}
+.map-section {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+.map-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: inline-block;
+    border-bottom: 1px solid var(--text-brown);
+    padding-bottom: 2px;
+}
+.map-placeholder {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    background-color: #ddd;
+    margin: 0 auto;
+}
+.transit-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+.transit-list {
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+    font-size: 12px;
+    line-height: 2.2;
+    margin-top: 20px;
+}
+.transit-list li::before {
+    content: "•";
+    margin-right: 10px;
+    color: var(--text-brown);
+}
+.transit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 40px;
+    max-width: 400px;
+    margin: 20px auto;
+    font-size: 12px;
+    text-align: left;
+}
+.footer-gray {
+    background-color: #E6E6E6;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 11px;
+    color: #666;
+}
+.footer-gray .shop-pink-square {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px auto;
+    background-color: #EFAFAF;
+}
+
+/* --- GALLERY PAGE STYLES --- */
+.gallery-top-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-bottom: 40px;
+}
+.gallery-grid-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #ddd;
+    object-fit: cover;
+}
+.gallery-section {
+    margin-bottom: 60px;
+    position: relative;
+}
+.gallery-title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-family: var(--font-main);
+    color: var(--text-brown);
+}
+.gallery-title span {
+    display: block;
+    font-size: 10px;
+    color: #888;
+    margin-top: 5px;
+}
+.gallery-zigzag-img {
+    width: 85%;
+    height: 250px;
+    object-fit: cover;
+    background-color: #ccc;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+}
+.align-right {
+    margin-left: auto;
+    border-radius: 10px 0 0 10px;
+}
+.align-left {
+    margin-right: auto;
+    border-radius: 0 10px 10px 0;
+}
+
+/* --- MENU NAVIGATION PAGE --- */
+.menu-container {
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.nav-menu {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+.nav-item:hover { opacity: 0.6; }
+.nav-en {
+    font-size: 24px;
+    border-bottom: 1px solid var(--text-brown);
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+}
+.nav-jp { font-size: 12px; letter-spacing: 1px; }
+.bg-doodle {
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    width: 180px;
+}
+.d-left { top: 20%; left: -40px; }
+.d-right { bottom: 10%; right: -40px; }
+
+/* =========================================================
+   MEDIA QUERIES (PC / DESKTOP LAYOUTS)
+   ========================================================= */
+@media (min-width: 768px) {
+    
+    /* --- 1. GENERAL ADJUSTMENTS --- */
+    .intro-text {
+        max-width: 1000px;
+        padding: 80px 20px;
+    }
+    
+    /* --- 2. ABOUT SECTION: Side-by-Side Layout --- */
+    .about-area {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        column-gap: 60px; /* Space in the middle */
+        align-items: center;
+        text-align: left; /* Force left alignment for everything */
+        
+        /* Layout Map */
+        grid-template-areas: 
+            "header header"
+            "text   video"
+            "btn    btn";
+    }
+
+    /* Assign items to the map */
+    .about-header       { grid-area: header; text-align: center; margin-bottom: 50px; }
+    .about-text-wrapper { grid-area: text; } /* Putting all text in the left column */
+    .video-container    { grid-area: video; width: 100%; }
+    .btn-oval           { grid-area: btn; justify-self: center; margin-top: 50px; }
+
+    /* Fix the Ribbon and Text Alignment inside the Left Column */
+    .about-green-ribbon {
+        display: inline-block; /* Fits tight to the text */
+        margin: 0 0 30px 0;    /* Remove auto margins, push bottom */
+    }
+    
+    .about-description {
+        font-size: 16px;       /* Bigger text for PC */
+        line-height: 2.2;
+        margin: 0;
+        text-align: left;      /* Ensure text is not centered */
+    }
+
+    /* Make Video BIGGER and correct size */
+    .video-container {
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+
+
+    /* --- 3. CALENDAR: Side-by-Side Layout --- */
+    .decor-brick-top, .decor-leaf-top, .decor-brick-bottom { display: none; }
+    .decor-vine-left { display: block; top: 35px; left: 35%; width: 50px; } 
+    .decor-vine-right { display: block; top: 35px; right: 35%; width: 50px; }
+
+    .calendar-content-wrapper {
+        flex-direction: row; 
+        justify-content: center;
+        align-items: flex-start;
+        gap: 60px;
+    }
+    .calendar-grid { margin-bottom: 0; flex: none; width: auto; }
+    .calendar-info { flex: none; width: auto; padding-top: 50px; }
+    .calendar-title-en { border-bottom: 2px solid var(--text-brown); }
+    .calendar-section { padding: 100px 20px; }
+
+    /* --- 4. HERO IMAGE --- */
+    .hero-image { height: 500px; }
+}
