@@ -1,77 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concept & Menu</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header>
         <div class="logo-container">
             <img src="images/logo.jpg" alt="Cafe logo" class="logo-img">
         </div>
-        <a href="menu.html" class="icon-link">☰</a> 
+        <a href="#" class="icon-link menu-toggle">☰</a>
     </header>
 
-    <div class="hero-image">
+    <!-- NEW BANNER -->
+    <div class="concept-banner" style="background-image: url('images/top-hero.jpg');">
+        <div class="cb-overlay">
+            <h1>Concept & Menu</h1>
+            <p>コンセプト・メニュー</p>
         </div>
+    </div>
 
-    <section class="intro-text">
-        <h2 class="intro-title">Concept & Menu</h2>
-        <p class="intro-desc">
-            Welcome to our local Japanese cafe.<br>
-            We serve handmade sweets and organic coffee.<br>
-            Relax and enjoy your time.
-        </p>
-    </section>
+    <!-- INTRO SECTION (New Design) -->
+    <section class="concept-intro">
+        <div class="intro-inner">
+            <div class="intro-text-block">
+                <h2 class="intro-course-title">
+                    <span class="en">Course List</span>
+                    <span class="jp">コース一覧</span>
+                </h2>
+                <p class="intro-course-desc">
+                    COCOTTEでは4つのコースが<br>
+                    日替わりで店舗運営をしています。
+                </p>
+            </div>
 
-    <section class="menu-card">
-        <div class="ribbon-container">Seasonal Menu</div>
-        
-        <div class="food-featured">
-             </div>
-        <div class="food-name">Seasonal Tart</div>
-
-        <div class="food-grid">
-            <div class="food-item">
-                <div class="food-item-box"></div>
-                <div class="food-name">Scone</div>
-            </div>
-            <div class="food-item">
-                <div class="food-item-box"></div>
-                <div class="food-name">Cookie</div>
-            </div>
-            <div class="food-item">
-                <div class="food-item-box"></div>
-                <div class="food-name">Cake</div>
-            </div>
-            <div class="food-item">
-                <div class="food-item-box"></div>
-                <div class="food-name">Muffin</div>
+            <div class="intro-links-block">
+                <a href="#pastry">パティシエコース</a>
+                <a href="#boulanger">ブーランジェ・製パンコース</a>
+                <a href="#cafe">カフェ＆バリスタコース</a>
+                <a href="#sweets">スイーツカフェクリエイターコース</a>
             </div>
         </div>
     </section>
 
-    <section class="menu-card">
-        <div class="ribbon-container">Drink Menu</div>
-        
-        <div class="food-featured"></div>
-        <div class="food-name">Special Coffee</div>
+    <div class="concept-main-wrapper">
 
-        <div class="food-grid">
-            <div class="food-item"><div class="food-item-box"></div><div class="food-name">Latte</div></div>
-            <div class="food-item"><div class="food-item-box"></div><div class="food-name">Tea</div></div>
-            <div class="food-item"><div class="food-item-box"></div><div class="food-name">Soda</div></div>
-            <div class="food-item"><div class="food-item-box"></div><div class="food-name">Juice</div></div>
+        <!-- SECTION 1: Pastry Chef Course -->
+        <section id="pastry" class="concept-row">
+            <div class="c-text-col">
+                <h2 class="c-title">PastryChef Course<br><span class="jp">パティシエコース</span></h2>
+                <p class="c-desc">
+                    季節のフルーツを使った<br>
+                    フレッシュなケーキや<br>
+                    焼き菓子。<br>
+                    素材の持ち味を活かした、<br>
+                    優しく、温かみのある味わい。<br>
+                    パティスリーカフェ専門学校の学生が、<br>
+                    心を込めて仕上げます。
+                </p>
+            </div>
+            <div class="c-visual-col">
+                <div class="arch-frame">
+                    <p class="arch-label">Pastry Menu</p>
+                    <!-- Main Image -->
+                    <div class="arch-main-img">
+                        <img src="images/press-release-dish-2.jpg" alt="Pastry Main">
+                    </div>
+                    <p class="arch-sub-label">Daily Menu</p>
+                    <!-- 2x2 Grid -->
+                    <div class="arch-grid">
+                        <div class="arch-grid-item"><img src="images/cupcake.png" alt="Sweet 1"></div>
+                        <div class="arch-grid-item"><img src="images/cake.png" alt="Sweet 2"></div>
+                        <div class="arch-grid-item"><img src="images/shop-data-picture-3.jpg" alt="Sweet 3"></div>
+                        <div class="arch-grid-item"><img src="images/pritzel.png" alt="Sweet 4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Boulanger Bread Making Course -->
+        <section id="boulanger" class="concept-row row-reverse">
+            <div class="c-text-col">
+                <h2 class="c-title">Boulanger Bread<br>Making Course<br><span class="jp">ブーランジェ・パンコース</span></h2>
+                <p class="c-desc">
+                    小麦の香り豊かな焼きたての<br>
+                    パン。ハード系のパンから<br>
+                    惣菜パンや菓子パンまで。<br>
+                    一つ一つ、丁寧に焼き上げた<br>
+                    COCOTTEこだわりのパン。<br>
+                    イートインもテイクアウトも<br>
+                    ご利用いただけます。
+                </p>
+            </div>
+            <div class="c-visual-col">
+                <div class="arch-frame">
+                    <p class="arch-label">Bread Menu</p>
+                    <div class="arch-main-img">
+                        <img src="images/shop-data-picture-1.jpg" alt="Bread Main">
+                    </div>
+                    <p class="arch-sub-label">Daily Menu</p>
+                    <div class="arch-grid">
+                        <div class="arch-grid-item"><img src="images/counter.jpg" alt="Bread 1"></div>
+                        <div class="arch-grid-item"><img src="images/kitchen.webp" alt="Bread 2"></div>
+                        <div class="arch-grid-item"><img src="images/shop-data-picture-2.jpg" alt="Bread 3"></div>
+                        <div class="arch-grid-item"><img src="images/exterior.avif" alt="Bread 4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Celebration & Event -->
+        <section id="cafe" class="concept-row">
+            <div class="c-text-col">
+                <h2 class="c-title">Celebration & Event<br><span class="jp">セレブレーション＆イベント</span></h2>
+                <p class="c-desc">
+                    お誕生日や記念日などの<br>
+                    特別な日を彩る特製ケーキ。<br>
+                    ご予約にて承ります。<br>
+                    大切な人との、心温まる<br>
+                    ひとときをお手伝いします。<br>
+                    季節のイベントに合わせた<br>
+                    限定メニューも登場。
+                </p>
+            </div>
+            <div class="c-visual-col">
+                <div class="arch-frame">
+                    <p class="arch-label">Event Menu</p>
+                    <div class="arch-main-img">
+                        <img src="images/press-release-dish-3.jpg" alt="Event Main">
+                    </div>
+                    <p class="arch-sub-label">Special Menu</p>
+                    <div class="arch-grid">
+                        <div class="arch-grid-item"><img src="images/press-release-dish-1.jpg" alt="Event 1"></div>
+                        <div class="arch-grid-item"><img src="images/press-release-dish-2.jpg" alt="Event 2"></div>
+                        <div class="arch-grid-item"><img src="images/top-hero.jpg" alt="Event 3"></div>
+                        <div class="arch-grid-item"><img src="images/eating-space.jpg" alt="Event 4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Seasonal Cake Creator -->
+        <section id="sweets" class="concept-row row-reverse">
+            <div class="c-text-col">
+                <h2 class="c-title">Seasonal Cake Creator<br>Course<br><span class="jp">シーズナルケーキコース</span></h2>
+                <p class="c-desc">
+                    季節ごとの旬な素材を<br>
+                    ダイレクトに楽しめる創作<br>
+                    ケーキ専門のコースから。<br>
+                    「今」しか味わえない、<br>
+                    その時季一番の美味しさを<br>
+                    COCOTTEからお届け。<br>
+                    見た目にも鮮やかな一皿を。
+                </p>
+            </div>
+            <div class="c-visual-col">
+                <div class="arch-frame">
+                    <p class="arch-label">Season Menu</p>
+                    <div class="arch-main-img">
+                        <img src="images/press-release-dish-2.jpg" alt="Season Main">
+                    </div>
+                    <p class="arch-sub-label">Limited Menu</p>
+                    <div class="arch-grid">
+                        <div class="arch-grid-item"><img src="images/shop-data-picture-1.jpg" alt="Season 1"></div>
+                        <div class="arch-grid-item"><img src="images/shop-data-picture-2.jpg" alt="Season 2"></div>
+                        <div class="arch-grid-item"><img src="images/shop-data-picture-3.jpg" alt="Season 3"></div>
+                        <div class="arch-grid-item"><img src="images/kitchen.webp" alt="Season 4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Responsive Footer (Standardized) -->
+    <footer class="footer-wrapper">
+        <!-- Mobile Footer (Gray) -->
+        <div class="footer-mobile-gray">
+            <div class="footer-logo-sq">
+                <img src="images/logo.jpg" alt="Logo">
+            </div>
+
+            <h3 style="color: #5A3A2A; letter-spacing: 2px; margin-bottom: 5px;">COCOTTE</h3>
+            <p>〒113-0033 東京都文京区本郷3-43-9<br>TEL : 03-5842-6478</p>
+
+            <div class="footer-links">
+                <a href="#">X(旧Twitter)</a>
+                <a href="#">Instagram</a>
+            </div>
+
+            <a href="#">オンラインストア</a><br>
+            <a href="#">東京スイーツ＆カフェ専門学校HP</a>
+
+            <div class="sanko-logo">sanko logo</div>
+
+            <div style="margin: 20px 0;">
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">サイトマップ</a>
+            </div>
+
+            <small>Copyright © Sanko Gakuen All rights reserved.</small>
         </div>
-    </section>
 
-    <footer>
-        <h3>Cafe Name</h3>
-        <a href="#" class="footer-btn">Back to Top</a>
+        <!-- PC Footer (Gray) -->
+        <div class="footer-pc-gray">
+            <div class="footer-content-pc">
+                <div class="footer-top-row">
+                    <div class="footer-brand-grp">
+                        <div class="footer-logo-sq-pc">
+                            <!-- Logo text or img -->
+                            logo
+                        </div>
+                        <div class="footer-addr-pc">
+                            <h3>COCOTTE</h3>
+                            <p>〒113-0033 東京都文京区本郷3-43-9<br>TEL : 03-5842-6478</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-links-pc">
+                        <div class="flink-row">
+                            <a href="#">X (旧Twitter)</a>
+                            <a href="#">Instagram</a>
+                        </div>
+                        <div class="flink-row">
+                            <a href="#">オンラインストア</a>
+                        </div>
+                        <div class="flink-row">
+                            <a href="#">東京スイーツ＆カフェ専門学校HP</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-pc">
+                    <div class="sanko-logo-pc">sanko logo</div>
+                    <div class="footer-nav-pc">
+                        <a href="#">プライバシーポリシー</a>
+                        <a href="#">サイトマップ</a>
+                    </div>
+                    <small>Copyright © Sanko Gakuen All rights reserved.</small>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
+
 </html>

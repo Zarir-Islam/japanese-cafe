@@ -1,87 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header>
         <div class="logo-container">
             <img src="images/logo.jpg" alt="Cafe logo" class="logo-img">
         </div>
-        <a href="menu.html" class="icon-link">☰</a>
+        <a href="#" class="icon-link menu-toggle">☰</a>
     </header>
 
-    <div class="hero-image" style="height: 250px; background-image: url('images/gallery-hero.jpg');">
+    <section class="gallery-top-section">
+        <div class="gallery-banner" style="background-image: url('images/top-hero.jpg');">
+            <div class="banner-content">
+                <h1 class="english-title">Gallery</h1>
+                <p class="japanese-title">店舗の様子</p>
+            </div>
+        </div>
+        <div class="gallery-nav-container">
+            <a href="#exterior" class="gallery-nav-item item-exterior">
+                <div class="nav-bg" style="background-image: url('images/exterior.avif');"></div>
+                <div class="nav-content">
+                    <h2 class="nav-en">Exterior</h2>
+                    <span class="nav-jp">外観</span>
+                </div>
+            </a>
+            <a href="#counter" class="gallery-nav-item item-counter">
+                <div class="nav-bg" style="background-image: url('images/counter.jpg');"></div>
+                <div class="nav-content">
+                    <h2 class="nav-en">Counter</h2>
+                    <span class="nav-jp">カウンター</span>
+                </div>
+            </a>
+            <a href="#eating-space" class="gallery-nav-item item-eating">
+                <div class="nav-bg" style="background-image: url('images/eating-space.jpg');"></div>
+                <div class="nav-content">
+                    <h2 class="nav-en">Eat In Space</h2>
+                    <span class="nav-jp">イートインスペース</span>
+                </div>
+            </a>
+            <a href="#kitchen" class="gallery-nav-item item-kitchen">
+                <div class="nav-bg" style="background-image: url('images/kitchen.webp');"></div>
+                <div class="nav-content">
+                    <h2 class="nav-en">Kitchen</h2>
+                    <span class="nav-jp">厨房</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="exterior" class="gallery-exterior-section">
+        <div class="exterior-background" style="background-image: url('images/exterior.avif');"></div>
+        <div class="exterior-content">
+            <h2 class="gallery-title">
+                Exterior
+                <span>外観</span>
+            </h2>
+        </div>
+        <div class="exterior-images-container">
+            <div class="ext-img-box img-pos-1">
+                <img src="images/shop-data-picture-1.jpg" alt="Exterior Scan 1">
+            </div>
+            <div class="ext-img-box img-pos-2">
+                <img src="images/shop-data-picture-2.jpg" alt="Exterior Scan 2">
+            </div>
+        </div>
+    </section>
+
+    <section id="counter" class="gallery-exterior-section">
+        <div class="exterior-background" style="background-image: url('images/counter.jpg');"></div>
+        <div class="exterior-content">
+            <h2 class="gallery-title">
+                Counter
+                <span>カウンター</span>
+            </h2>
+        </div>
+        <div class="exterior-images-container">
+            <div class="ext-img-box img-pos-1">
+                <img src="images/counter.jpg" alt="Counter View 1">
+            </div>
+            <div class="ext-img-box img-pos-2">
+                <img src="images/kitchen.webp" alt="Counter View 2">
+            </div>
+        </div>
+    </section>
+
+    <section id="eating-space" class="gallery-exterior-section">
+        <div class="exterior-background" style="background-image: url('images/eating-space.jpg');"></div>
+        <div class="exterior-content">
+            <h2 class="gallery-title">
+                Eat In Space
+                <span>イートインスペース</span>
+            </h2>
+        </div>
+        <div class="exterior-images-container">
+            <div class="ext-img-box img-pos-1">
+                <img src="images/shop-data-picture-1.jpg" alt="Cafe Atmosphere">
+            </div>
+            <div class="ext-img-box img-pos-2">
+                <img src="images/press-release-dish-2.jpg" alt="Sweets">
+            </div>
+        </div>
+    </section>
+
+    <section id="kitchen" class="gallery-exterior-section">
+        <div class="exterior-background" style="background-image: url('images/kitchen.webp');"></div>
+        <div class="exterior-content">
+            <h2 class="gallery-title">
+                Kitchen
+                <span>厨房</span>
+            </h2>
+        </div>
+        <div class="exterior-images-container">
+            <div class="ext-img-box img-pos-1">
+                <img src="images/shop-data-picture-1.jpg" alt="Cooking">
+            </div>
+            <div class="ext-img-box img-pos-2">
+                <img src="images/press-release-dish-1.jpg" alt="Dish">
+            </div>
+        </div>
+    </section>
+
+    <section id="other" class="gallery-exterior-section">
+        <div class="exterior-background" style="background-image: url('images/shop-data-picture-2.jpg');"></div>
+        <div class="exterior-content">
+            <h2 class="gallery-title">
+                Other
+                <span>その他</span>
+            </h2>
+        </div>
+        <div class="exterior-images-container">
+            <div class="ext-img-box img-pos-1">
+                <img src="images/press-release-dish-2.jpg" alt="Sweets">
+            </div>
+            <div class="ext-img-box img-pos-2">
+                <img src="images/shop-data-picture-3.jpg" alt="Details">
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Responsive Footer -->
+    <footer class="footer-wrapper">
+        <!-- Mobile Footer (Gray) -->
+        <div class="footer-mobile-gray">
+            <div class="footer-logo-sq">
+                <img src="images/logo.jpg" alt="Logo">
+            </div>
+
+            <h3 style="color: #5A3A2A; letter-spacing: 2px; margin-bottom: 5px;">COCOTTE</h3>
+            <p>〒113-0033 東京都文京区本郷3-43-9<br>TEL : 03-5842-6478</p>
+
+            <div class="footer-links">
+                <a href="#">X(旧Twitter)</a>
+                <a href="#">Instagram</a>
+            </div>
+
+            <a href="#">オンラインストア</a><br>
+            <a href="#">東京スイーツ＆カフェ専門学校HP</a>
+
+            <div class="sanko-logo">sanko logo</div>
+
+            <div style="margin: 20px 0;">
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">サイトマップ</a>
+            </div>
+
+            <small>Copyright © Sanko Gakuen All rights reserved.</small>
         </div>
 
-    <div class="gallery-top-grid">
-        <img src="images/grid1.jpg" class="gallery-grid-img" alt="thumb">
-        <img src="images/grid2.jpg" class="gallery-grid-img" alt="thumb">
-        <img src="images/grid3.jpg" class="gallery-grid-img" alt="thumb">
-        <img src="images/grid4.jpg" class="gallery-grid-img" alt="thumb">
-    </div>
+        <!-- PC Footer (Gray) -->
+        <div class="footer-pc-gray">
+            <div class="footer-content-pc">
+                <!-- Top Row: Logo/Addr (Left) vs Links (Right) -->
+                <div class="footer-top-row">
+                    <!-- Left: Brand -->
+                    <div class="footer-brand-grp">
+                        <div class="footer-logo-sq-pc">
+                            <!-- Logo text or img -->
+                            logo
+                        </div>
+                        <div class="footer-addr-pc">
+                            <h3>COCOTTE</h3>
+                            <p>〒113-0033 東京都文京区本郷3-43-9<br>TEL : 03-5842-6478</p>
+                        </div>
+                    </div>
 
-    <section class="gallery-section">
-        <h2 class="gallery-title">
-            Exterior
-            <span>外観</span>
-        </h2>
-        <div class="gallery-zigzag-img align-right" style="background-image: url('images/exterior.jpg');"></div>
-    </section>
+                    <!-- Right: Links -->
+                    <div class="footer-links-pc">
+                        <div class="flink-row">
+                            <a href="#">X (旧Twitter)</a>
+                            <a href="#">Instagram</a>
+                        </div>
+                        <div class="flink-row">
+                            <a href="#">オンラインストア</a>
+                        </div>
+                        <div class="flink-row">
+                            <a href="#">東京スイーツ＆カフェ専門学校HP</a>
+                        </div>
+                    </div>
+                </div>
 
-    <section class="gallery-section">
-        <h2 class="gallery-title">
-            Counter
-            <span>カウンター</span>
-        </h2>
-        <div class="gallery-zigzag-img align-left" style="background-image: url('images/counter.jpg');"></div>
-    </section>
-
-    <section class="gallery-section">
-        <h2 class="gallery-title">
-            Eat In Space
-            <span>イートインスペース</span>
-        </h2>
-        <div class="gallery-zigzag-img align-right" style="background-image: url('images/eatin.jpg');"></div>
-    </section>
-
-    <section class="gallery-section">
-        <h2 class="gallery-title">
-            Kitchen
-            <span>厨房</span>
-        </h2>
-        <div class="gallery-zigzag-img align-left" style="background-image: url('images/kitchen.jpg');"></div>
-    </section>
-
-    <section class="gallery-section">
-        <h2 class="gallery-title">
-            Other
-            <span>その他</span>
-        </h2>
-        <div class="gallery-zigzag-img align-right" style="background-image: url('images/sweets.jpg');"></div>
-    </section>
-
-    <footer>
-        <div class="shop-pink-square" style="margin: 0 auto 30px auto; width: 60px; height: 60px;">
-            <img src="images/logo.jpg" alt="Cafe logo" class="logo-img">
+                <!-- Bottom Centered Area -->
+                <div class="footer-bottom-pc">
+                    <div class="sanko-logo-pc">sanko logo</div>
+                    <div class="footer-nav-pc">
+                        <a href="#">プライバシーポリシー</a>
+                        <a href="#">サイトマップ</a>
+                    </div>
+                    <small>Copyright © Sanko Gakuen All rights reserved.</small>
+                </div>
+            </div>
         </div>
-        <h3>Cafe Name</h3>
-        <p>1-2-3 Tokyo, Japan</p>
-        
-        <br><br>
-        <a href="#" class="footer-btn">Back to Top</a>
-        <br><br>
-        
-        <div style="font-size: 10px;">
-            <a href="#">Privacy Policy</a> | <a href="#">Site Map</a>
-        </div>
-        <br>
-        <small>&copy; 2026 Cafe Project</small>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
+
 </html>

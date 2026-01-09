@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Access</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header>
         <div class="logo-container">
-            <img src="images/logo.jpg" alt="Cafe logo" class="logo-img">
+            <!-- Text Logo with Vines for Access Page -->
+            <div class="logo-vines">
+                <img src="images/vine-left.png" alt="" class="logo-vine-l">
+                <div class="logo-text-group">
+                    <span class="logo-main">COCOTTE</span>
+                    <span class="logo-sub">campus cafe</span>
+                </div>
+                <img src="images/vine-right.png" alt="" class="logo-vine-r">
+            </div>
         </div>
-        <a href="menu.html" class="icon-link">☰</a>
+        <a href="#" class="icon-link menu-toggle">☰</a>
     </header>
 
-    <div class="hero-image" style="height: 250px; position: relative;">
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
-            <h1 style="font-size: 32px; font-weight: normal; letter-spacing: 2px;">Access</h1>
-            <p style="font-size: 12px;">店舗への行き方</p>
+    <!-- Access Hero with Text Overlay -->
+    <div class="access-hero-wrapper">
+        <img src="images/access-page-top.jpg" alt="Access Hero" class="access-hero-img">
+        <div class="access-hero-text">
+            <h1>Access</h1>
+            <p>店舗への行き方</p>
         </div>
     </div>
 
     <section class="access-info-block">
         <div class="shop-pink-square">
-            <img src="images/logo.jpg" alt="Cafe logo" class="logo-img">
+            logo
         </div>
         <div class="shop-details-text">
             <h3>COCOTTE</h3>
@@ -37,16 +49,18 @@
     </section>
 
     <section class="map-section">
-        <h2 class="map-title">Google Map</h2>
-        <div class="map-placeholder">
-            <p style="padding-top: 150px; color: #777;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58377.65522065642!2d90.38069759999999!3d23.868211199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c4241f7aaaab%3A0x68971d6834042aeb!2sRajlokkhi%20Complex!5e0!3m2!1sen!2sbd!4v1767793348568!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        <h2 class="map-title-brown">Google Map</h2>
+        <div class="map-container-google">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.060195743405!2d139.7580663152594!3d35.70636258018861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c3a1106e289%3A0xe5a3c9a4891d8e0!2s3-ch%C5%8Dme-43-9%20Hong%C5%8D%2C%20Bunkyo%20City%2C%20Tokyo%20113-0033%2C%20Japan!5e0!3m2!1sen!2sus!4v1634567890123!5m2!1sen!2sus"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
     <section class="map-section">
-        <h2 class="map-title">詳細マップ (Detailed Map)</h2>
-        <div class="map-placeholder">
-            <p style="padding-top: 150px; color: #777;">Static Map Image</p>
+        <h2 class="map-title-brown">詳細マップ</h2>
+        <div class="map-placeholder-gray">
+            <p>学校サイトから引用</p>
         </div>
     </section>
 
@@ -74,24 +88,81 @@
         </div>
     </section>
 
-    <footer class="footer-gray">
-        <div class="shop-pink-square">
-            <img src="images/logo.jpg" alt="Cafe logo" class="logo-img">
-        </div>
-        
-        <h3 style="color: var(--text-brown); letter-spacing: 2px; margin-bottom: 10px;">COCOTTE</h3>
-        <p>〒113-0033 東京都文京区本郷3-43-9</p>
-        <p>TEL : 03-5842-6478</p>
-        
-        <div style="margin: 30px 0; font-size: 10px;">
-            <a href="#" style="margin: 0 10px;">Twitter</a>
-            <a href="#" style="margin: 0 10px;">Instagram</a>
-            <br><br>
-            <a href="#">Privacy Policy</a> | <a href="#">Site Map</a>
+    <!-- NEW: Responsive Footer -->
+    <footer class="footer-wrapper">
+        <!-- Mobile Footer (Gray) -->
+        <div class="footer-mobile-gray">
+            <div class="footer-logo-sq">
+                <img src="images/logo.jpg" alt="Logo">
+            </div>
+
+            <h3 style="color: #5A3A2A; letter-spacing: 2px; margin-bottom: 5px;">COCOTTE</h3>
+            <p>〒113-0033 東京都文京区本郷3-43-9<br>TEL : 03-5842-6478</p>
+
+            <div class="footer-links">
+                <a href="#">X(旧Twitter)</a>
+                <a href="#">Instagram</a>
+            </div>
+
+            <a href="#">オンラインストア</a><br>
+            <a href="#">東京スイーツ＆カフェ専門学校HP</a>
+
+            <div class="sanko-logo">sanko logo</div>
+
+            <div style="margin: 20px 0;">
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">サイトマップ</a>
+            </div>
+
+            <small>Copyright © Sanko Gakuen All rights reserved.</small>
         </div>
 
-        <small>Copyright © 2026 Cafe Project All rights reserved.</small>
+        <!-- PC Footer (Gray) -->
+        <div class="footer-pc-gray">
+            <div class="footer-content-pc">
+                <!-- Top Row: Logo/Addr (Left) vs Links (Right) -->
+                <div class="footer-top-row">
+                    <!-- Left: Brand -->
+                    <div class="footer-brand-grp">
+                        <div class="footer-logo-sq-pc">
+                            <!-- Logo text or img -->
+                            logo
+                        </div>
+                        <div class="footer-addr-pc">
+                            <h3>COCOTTE</h3>
+                            <p>〒113-0033 東京都文京区本郷3-43-9<br>TEL : 03-5842-6478</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Links -->
+                    <div class="footer-links-pc">
+                        <div class="flink-row">
+                            <a href="#">X (旧Twitter)</a>
+                            <a href="#">Instagram</a>
+                        </div>
+                        <div class="flink-row">
+                            <a href="#">オンラインストア</a>
+                        </div>
+                        <div class="flink-row">
+                            <a href="#">東京スイーツ＆カフェ専門学校HP</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Centered Area -->
+                <div class="footer-bottom-pc">
+                    <div class="sanko-logo-pc">sanko logo</div>
+                    <div class="footer-nav-pc">
+                        <a href="#">プライバシーポリシー</a>
+                        <a href="#">サイトマップ</a>
+                    </div>
+                    <small>Copyright © Sanko Gakuen All rights reserved.</small>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
+
 </html>
