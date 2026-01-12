@@ -17,7 +17,7 @@
         <a href="#" class="icon-link menu-toggle">☰</a>
     </header>
 
-    <div class="hero-image" style="background-image: url('images/top-hero.jpg');">
+    <div class="hero-image">
     </div>
 
     <section class="intro-text about-area">
@@ -109,6 +109,8 @@
                 <div class="cal-day">31</div>
             </div>
 
+            <img src="images/brick-bottom-right.png" alt="" class="calendar-decor decor-brick-bottom">
+
             <div class="calendar-info">
                 <ul class="calendar-legend">
                     <li><span class="legend-marker">○</span> : パティシエコース</li>
@@ -123,7 +125,7 @@
             </div>
         </div>
 
-        <img src="images/brick-bottom-right.png" alt="" class="calendar-decor decor-brick-bottom">
+
     </section>
 
     <!-- NEW: 1st Please Section -->
@@ -161,7 +163,13 @@
         <span class="pr-sub">お知らせ</span>
 
         <div class="pr-slider-container">
-            <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous"></button>
+            <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous">
+                <svg width="25" height="40" viewBox="0 0 25 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 1 L2 20 L24 39" fill="#9FCBAB" stroke="#5A3A2A" stroke-width="2"
+                        stroke-linejoin="round" />
+                    <path d="M24 1 L2 20 L24 39" fill="#9FCBAB" />
+                </svg>
+            </button>
 
             <div class="pr-slider-track-window">
                 <div class="pr-slider-track" id="sliderTrack">
@@ -204,7 +212,12 @@
                 </div>
             </div>
 
-            <button class="slider-btn next-btn" id="nextBtn" aria-label="Next"></button>
+            <button class="slider-btn next-btn" id="nextBtn" aria-label="Next">
+                <svg width="25" height="40" viewBox="0 0 25 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1 L23 20 L1 39" fill="#9FCBAB" stroke="#5A3A2A" stroke-width="2"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
         </div>
     </section>
 
@@ -216,27 +229,29 @@
         <h2 class="sd-title">Shop Data</h2>
         <span class="sd-sub">お店について</span>
 
-        <h3 class="sd-grid-title">お店の様子</h3>
+
 
         <div class="shop-data-content">
             <div class="sd-grid">
                 <div class="sd-img-card">
                     <div class="sd-img-container">
-                        <img src="images/shop-data-picture-1.jpg" alt="Shop Data 1" class="sd-img-real">
+                        <img src="images/shop-data-picture-1.jpg" alt="Cooking" class="sd-img-real">
                     </div>
-                    <span class="sd-label">調理中</span>
                 </div>
                 <div class="sd-img-card">
                     <div class="sd-img-container">
-                        <img src="images/shop-data-picture-2.jpg" alt="Shop Data 2" class="sd-img-real">
+                        <img src="images/shop-data-picture-2.jpg" alt="Bakery" class="sd-img-real">
                     </div>
-                    <span class="sd-label">おいしい</span>
                 </div>
                 <div class="sd-img-card">
                     <div class="sd-img-container">
-                        <img src="images/shop-data-picture-3.jpg" alt="Shop Data 3" class="sd-img-real">
+                        <img src="images/shop-data-picture-3.jpg" alt="Service" class="sd-img-real">
                     </div>
-                    <span class="sd-label">おいしい</span>
+                </div>
+                <div class="sd-img-card">
+                    <div class="sd-img-container">
+                        <img src="images/eating-space.jpg" alt="Atmosphere" class="sd-img-real">
+                    </div>
                 </div>
             </div>
 

@@ -7,6 +7,7 @@
     --ribbon-green: #8FB996;
     --footer-pink: #F8C8C8;
     --font-main: 'Zen Old Mincho', serif;
+    --font-en: 'Zen Old Mincho', serif;
 }
 
 * {
@@ -241,6 +242,7 @@ header {
     height: 250px;
     /* Mobile Height */
     background-color: #ddd;
+    background-image: url('../images/mv.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -312,12 +314,14 @@ header {
 
 .about-title-main {
     font-size: 28px;
-    color: var(--text-brown);
+    color: #8B4513;
+    /* Reddish Brown */
     display: inline-block;
-    border-bottom: 3px dotted #F8C8C8;
+    border-bottom: 3px dotted #EFAFAF;
+    /* Pink Dotted */
     padding-bottom: 5px;
     margin-bottom: 5px;
-    font-family: var(--font-main);
+    font-family: var(--font-en);
 }
 
 .about-green-ribbon {
@@ -325,25 +329,24 @@ header {
     background-color: #9FCBAB;
     /* Green */
     color: white;
-    padding: 10px 20px 10px 10px;
+    padding: 15px 40px 15px 20px;
+    /* Extra right padding for arrow */
     margin-bottom: 30px;
     display: inline-block;
     /* Width auto */
     font-size: 16px;
     font-weight: bold;
     position: relative;
-    /* Flag shape: Rectangle with arrow on right end? 
-       Image shows: Left edge flat, Right edge arrow point OUT? or IN?
-       Usually ribbon is:
-       clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%); (Arrow In)
-       Let's stick to the previous shape or adjust.
-       Image shows: Standard ribbon.
-    */
-    clip-path: polygon(0 0, 100% 0, 92% 50%, 100% 100%, 0 100%);
+    /* Arrow pointing OUT (Right) */
+    clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
     text-align: left;
-    margin-left: 0;
-    /* Align left */
+    margin-left: -20px;
+    /* Touch left edge (counteract section padding) */
     width: auto;
+    line-height: 1.4;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
 }
 
 .about-description {
@@ -352,7 +355,8 @@ header {
     font-size: 14px;
     margin-bottom: 40px;
     padding: 0 10px;
-    color: var(--text-brown);
+    color: #8B4513;
+    font-family: var(--font-en);
 }
 
 /* Video Box */
@@ -410,27 +414,35 @@ header {
 
 /* DEFAULT (MOBILE) STYLES */
 /* 1. Mobile Decorations (Bricks & Leaves) - Visible */
+/* 1. Mobile Decorations (Bricks & Leaves) - Visible */
 .decor-brick-top {
     display: block;
-    top: 0;
+    top: 100px;
     left: 0;
-    width: 150px;
-    opacity: 0.8;
+    width: 180px;
+    /* Increased from 140px */
+    opacity: 0.9;
 }
 
 .decor-leaf-top {
     display: block;
-    top: 0;
+    top: 60px;
     right: 0;
-    width: 120px;
+    width: 150px;
 }
 
 .decor-brick-bottom {
     display: block;
-    bottom: 0;
-    right: 20px;
-    width: 200px;
-    opacity: 0.8;
+    position: static;
+    /* In flow */
+    margin-left: auto;
+    /* Align right */
+    width: 240px;
+    /* Increased from 180px */
+    opacity: 0.9;
+    margin-top: -30px;
+    /* Overlap grid slightly? */
+    margin-bottom: 20px;
 }
 
 /* 2. PC Decorations (Vines) - Hidden on Mobile */
@@ -440,26 +452,32 @@ header {
 }
 
 /* 3. Title */
+/* 3. Title */
 .calendar-title-en {
-    font-size: 24px;
+    font-size: 26px;
     display: inline-block;
     margin-bottom: 5px;
-    letter-spacing: 1px;
-    border-bottom: 3px dotted #F8C8C8;
-    /* Dotted on Mobile */
+    letter-spacing: 2px;
+    color: #8B4513;
+    /* Reddish Brown */
+    border-bottom: 2px dotted #EFAFAF;
+    /* Pink Dotted */
     padding-bottom: 5px;
+    font-family: var(--font-en);
 }
 
 .calendar-title-jp {
-    font-size: 12px;
+    font-size: 13px;
     display: block;
     margin-bottom: 30px;
-    color: #888;
+    color: #8B4513;
+    /* Match Title */
 }
 
 .calendar-month {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: normal;
 }
 
 /* 4. Layout: Stacked for Mobile */
@@ -503,20 +521,23 @@ header {
     padding: 0;
     margin: 0 0 20px 0;
     line-height: 2;
-    color: #888;
+    color: #8B4513;
+    /* Reddish Brown */
     font-size: 11px;
+    letter-spacing: 1px;
 }
 
 .legend-marker {
     display: inline-block;
     width: 15px;
-    color: var(--text-brown);
+    color: #8B4513;
 }
 
 .calendar-note {
     line-height: 1.6;
-    color: #888;
+    color: #8B4513;
     font-size: 11px;
+    letter-spacing: 1px;
 }
 
 /* --- INFO DARK SECTION --- */
@@ -1387,6 +1408,7 @@ footer {
     /* --- 4. HERO IMAGE --- */
     .hero-image {
         height: 500px;
+        background-image: url('../images/mv (1).png');
     }
 }
 
@@ -1526,8 +1548,8 @@ footer {
 
 /* Window limits visibility on Mobile */
 .pr-slider-track-window {
-    width: 280px;
-    /* Width of one card */
+    width: 300px;
+    /* Increased to fit 280px card + padding */
     overflow: hidden;
     padding: 15px 5px;
     /* Space for shadows/borders */
@@ -1583,14 +1605,15 @@ footer {
     font-size: 13px;
     line-height: 1.8;
     color: var(--text-brown);
-    text-align: left;
+    text-align: center;
+    /* Centered text */
     width: 100%;
 }
 
 /* Navigation Buttons (Arrows) */
 .slider-btn {
     width: 30px;
-    height: 30px;
+    height: 40px;
     background: none;
     border: none;
     cursor: pointer;
@@ -1601,29 +1624,7 @@ footer {
     align-items: center;
 }
 
-/* Triangle Shape using Clip Path background 
-   User wants "Greenish Arrows (triangle shape with border)".
-   Since border is hard with clip-path, we use nested pseudo-elements or just a solid triangle for now,
-   Or SVG image. I will simply use a solid green triangle for Mobile, and Gray for PC.
-*/
-.slider-btn::after {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 30px;
-    background-color: #9FCBAB;
-    /* Greenish */
-    /* Triangle pointing right by default, rotate for left */
-    clip-path: polygon(0 0, 100% 50%, 0 100%);
-}
-
-.prev-btn::after {
-    transform: rotate(180deg);
-}
-
-.next-btn::after {
-    /* Right is default */
-}
+/* Old CSS Triangle Hack Removed */
 
 
 /* --- SHOP DATA SECTION --- */
@@ -1637,6 +1638,7 @@ footer {
 
 /* Decoration Vines */
 .sd-vine-left {
+    display: none;
     position: absolute;
     top: 40px;
     left: 25%;
@@ -1644,6 +1646,7 @@ footer {
 }
 
 .sd-vine-right {
+    display: none;
     position: absolute;
     top: 60px;
     right: 25%;
@@ -1682,34 +1685,24 @@ footer {
 
 /* Grid for Shop Images */
 .sd-grid {
-    display: flex;
-    flex-wrap: wrap;
-    /* Allow wrapping for mobile grid */
-    justify-content: center;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
     margin-bottom: 40px;
-    max-width: 400px;
-    /* Constrain width on mobile for 2x2 look */
+    max-width: 350px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .sd-img-card {
-    width: 45%;
-    /* Approx 2 items per row with gap */
-    text-align: center;
+    width: 100%;
 }
 
 /* Real Image Container matching the "square" look */
 .sd-img-container {
     width: 100%;
     aspect-ratio: 1/1;
-    background-color: #D9D9D9;
-    padding: 10px;
-    /* Optional border effect from design */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
 .sd-img-real {
@@ -1717,16 +1710,6 @@ footer {
     height: 100%;
     object-fit: cover;
     display: block;
-}
-
-
-/* ... (Rest of labels, info box, etc. can stay) ... */
-.sd-label {
-    font-size: 10px;
-    color: var(--text-brown);
-    display: block;
-    text-align: left;
-    margin-top: 5px;
 }
 
 /* Bottom Area Layout */
@@ -2023,6 +2006,18 @@ footer {
         /* Remove mobile width constraint */
     }
 
+    /* Show Shop Data Vines on PC */
+    .sd-vine-left,
+    .sd-vine-right {
+        display: block;
+        width: 80px;
+    }
+
+    .sd-grid {
+        display: flex;
+        /* Larger images */
+    }
+
     .sd-img-card {
         width: 200px;
         /* Larger images */
@@ -2147,10 +2142,11 @@ footer {
         height: 480px;
     }
 
-    /* Arrows - Gray on PC */
-    .slider-btn::after {
-        background-color: #ccc;
-        /* Gray */
+    /* Arrows - SVG handles color, or override fill via CSS if needed */
+    .slider-btn svg path {
+        fill: #ccc;
+        /* Gray on PC */
+        stroke: #999;
     }
 
 
